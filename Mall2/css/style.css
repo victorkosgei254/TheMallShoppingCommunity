@@ -1,0 +1,180 @@
+.container{
+	display : grid;
+	grid-template-rows:10% 80% 10%;
+	
+	grid-template-areas:
+		"c c c"
+		"b b b"
+		"m m m"
+		"f f f"
+		
+	;
+}
+
+.contact{
+	grid-area:c;
+	font-size: 12px;
+	background-color:#f7f7f7;
+	font-family: monospace;
+
+}
+
+
+.banner{
+	grid-area:b;
+	display: grid;
+	grid-template-columns:auto 40%;
+	grid-template-areas:
+		"n s"
+	;
+}
+.banner{
+	background: #f7f7f7;
+}
+
+.banner .name{
+	/*catelar*/
+	grid-area:n;
+	font-size: 2.0rem;
+	color: #f45b09;
+	font-family: chiller;
+	font-style: italic;
+
+}
+
+.banner .search{
+	grid-area:s;
+	padding-top: 10%;
+	font-family: monospace;
+
+
+}
+
+.main{
+	grid-area:m;
+	display: grid;
+	grid-template-columns:10% 70% 20%;
+	grid-template-areas:
+		"n f c"
+	;
+}
+
+.main .menu{
+	grid-area:n;
+	text-align: left;
+	
+
+}
+.main .menu b{
+	color:#f45b09;
+	font-size: 16px;
+	
+
+}
+
+.main .featured_products{
+	grid-area:f;
+	display: grid;
+	grid-template-columns:repeat(3, 1fr);
+	grid-template-rows:repeat(2,minmax(100px,200px));
+	grid-auto-flow:row;
+	/*padding-bottom: 20%;*/
+	grid-gap:1rem;
+
+}
+.main .product-description{
+	grid-area:f;
+
+	display: grid;
+	grid-template-columns:30% 70%;
+	grid-template-areas:
+		"m d"
+	;
+
+}
+.main .navigation .menu input{
+	background: white;
+	border:0px solid white;
+	width: 80%;
+	font-size: 18px;
+	padding-top: 10px;
+	transition:1s;
+	font-family: Gabriola;
+	text-align: left;
+	color: #1a0af6;
+	font-weight: bold;
+}
+.main .navigation .menu{
+	
+	background: #f7f7f7
+	border:1px #f7f7f7;
+	border-radius:10px;
+}
+.main .product-description .image{
+	grid-area:m;
+	
+}
+.prd-img{
+	transition:1s;
+}
+.prd-img : hover{
+	transform : scale(1.2);
+
+}
+
+.main .product-description .prd-description{
+	grid-area:d;
+	text-align: center;
+	padding: 15px;
+	font-size: 14px;
+	font-family: monospace;
+}
+.featured-products{
+	display: flex;
+	font-size: 12px;
+
+
+}
+.product{
+	font-size: 12px;
+	font-family: monospace;
+
+
+}
+.product input{
+	font-size: 12px;
+	font-family: monospace;
+	background: #f45b09;
+	border: 0px ;
+	border-radius: 5px;
+	text-align: center;
+
+
+}
+.main .cart{
+	grid-area:c;
+	font-size: 12px;
+	font-family: 'h';
+
+	
+}
+.main .cart .total{
+	color: black;
+	border:1px solid black;
+	border-radius: 5px;
+}
+.main .cart .title{
+	font-size: 16px;
+	color: #f45b09;
+}
+.main .cart ul{
+	background: white;
+	border-radius: 10px;
+	font-family: monospace;
+	font-size: 12px;
+}
+.footer{
+	grid-area:f;
+	padding-top: 5%;
+
+}
